@@ -1,0 +1,73 @@
+<div class="user-details">
+  <ng-container *ngIf="user.id">
+    <div class="dados-pessoais">
+      <h4>Dados Pessoais</h4>
+      <div class="form-group">
+        <h6>Nome</h6>
+        <p>{{ user.nome }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Telefone</h6>
+        <p>{{ user.telefone }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Telefone de contato</h6>
+        <p>{{ user.telefoneParente }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Indicação</h6>
+        <p>{{ user.indicacao }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Adm responsável</h6>
+        <p>{{ user.adm }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Data de cadastro</h6>
+        <p>{{ user.createdAt | date : "dd/MM/yyyy - HH:mm" }}</p>
+      </div>
+    </div>
+    <div class="enderecos">
+      <h4>Endereço</h4>
+      <div class="form-group">
+        <h6>CEP</h6>
+        <p>{{ user.addresses.cep }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Logradouro</h6>
+        <p>{{ user.addresses.rua }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Número</h6>
+        <p>{{ user.addresses.numero }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Bairro</h6>
+        <p>{{ user.addresses.bairro }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Cidade</h6>
+        <p>{{ user.addresses.cidade }}</p>
+      </div>
+    </div>
+    <div class="automovel">
+      <h4>Automóvel</h4>
+      <div class="form-group">
+        <h6>Tipo</h6>
+        <p>{{ user.automobiles.tipo }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Modelo</h6>
+        <p>{{ user.automobiles.modelo }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Ano</h6>
+        <p>{{ user.automobiles.ano }}</p>
+      </div>
+      <div class="form-group">
+        <h6>Placa</h6>
+        <p>{{ user.automobiles.placa }}</p>
+      </div>
+    </div>
+  </ng-container>
+</div>
